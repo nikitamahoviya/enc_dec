@@ -1,20 +1,21 @@
 <html>
 
 <head>
-    <title>Decryption</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'css/bulma.css') }}">
+    <title>Encryption</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 </head>
 
 <body style="padding-left: 20%; padding-top: 5%;padding-right: 20%" background="{{
 url_for('static',filename = 'images/encrypt_body.jpg') }}">
     <div style="padding-left: 20%; padding-top: 10%;padding-right: 20%; padding-bottom: 20">
         <img src="">
-        <h1 class="title is-2 has-text-white">Reciever Side</h1>
+        <h1 class="title is-2 has-text-white">Sender Side</h1>
         <form method="post">
             <div class="field">
-                <label class="label has-text-white">Cover Name</label>
+                <label class="label has-text-white">Source Name</label>
                 <div class="control">
-                    <input class="input" type="text" name="cover_name" placeholder="Source Name" required>
+                    <input class="input" type="text" name="source_name" placeholder="Source Name" required>
                 </div>
             </div>
             <div class="field">
@@ -30,15 +31,21 @@ url_for('static',filename = 'images/encrypt_body.jpg') }}">
                 </div>
             </div>
             <div class="field">
-                <label class="label has-text-white">new Cover Name</label>
+                <label class="label has-text-white">Cover Name</label>
                 <div class="control">
-                    <input class="input" type="text" name="new_cover_name" placeholder="enter new Name" required>
+                    <input class="input" type="text" name="cover_name" placeholder="Cover name" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label has-text-white">New Image Name</label>
+                <div class="control">
+                    <input class="input" type="text" name="new_name" placeholder="Enter New Name for
+saving Image" required>
                 </div>
             </div>
             <input type="submit" name="" class="button" value="Submit">
         </form>
     </div>
-    35
 </body>
 
 </html>
